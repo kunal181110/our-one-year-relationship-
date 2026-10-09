@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe5ef">
+<title>For My Bhai Jaan 💗</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #71334e;
+  text-align: center;
+  background: linear-gradient(160deg, #fff7fa, #ffe1ed, #fff0f6);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.hero { padding: 65px 20px 35px; }
+
+.eyebrow {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b65c82;
+}
+
+h1 {
+  color: #c34d7c;
+  font-size: clamp(37px, 10vw, 56px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+p { line-height: 1.8; }
+
+.heart {
+  display: inline-block;
+  font-size: 40px;
+  animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.2); }
+}
+
+.card {
+  width: min(90%, 460px);
+  margin: 22px auto;
+  padding: 28px 22px;
+  border: 1px solid #f4c2d6;
+  border-radius: 25px;
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 12px 35px rgba(176,76,119,.10);
+}
+
+h2 {
+  font-weight: normal;
+  color: #c34d7c;
+  line-height: 1.5;
+}
+
+.date {
+  color: #c34d7c;
+  font-size: 30px;
+  margin: 18px 0 8px;
+}
+
+.letter {
+  white-space: pre-line;
+  font-size: 16px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+button {
+  border: 0;
+  border-radius: 28px;
+  background: #d85f8d;
+  color: white;
+  padding: 15px 22px;
+  margin-top: 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#surprise {
+  display: none;
+  color: #bd4678;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-top: 24px;
+}
+
+.floating {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  animation: float-up 7s linear forwards;
+  z-index: 5;
+}
+
+@keyframes float-up {
+  to {
+    transform: translateY(-115vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  padding: 25px 15px 40px;
+  color: #a65b7b;
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PERSONALIZE YOUR STORY HERE -->
+<script>
+const YOUR_NICKNAME = "Gadhedu";
+const HER_NICKNAME = "Bhai Jaan";
+
+// Enter the year you became a couple, e.g. "2026".
+const RELATIONSHIP_YEAR = "ADD YOUR YEAR";
+</script>
+
+<header class="hero">
+  <div class="eyebrow">A little story, just for us</div>
+  <div class="heart">💗</div>
+
+  <h1>My Bhai Jaan,<br>My Favourite Person</h1>
+
+  <p>
+    We began as good friends... 🌷<br>
+    Then friendship became something special.<br>
+    And 11 October became our day. ❤️
+  </p>
+</header>
+
+<section class="card">
+  <div class="eyebrow">The beginning of our relationship</div>
+
+  <div class="date">11 October 💞</div>
+  <div id="year" style="color:#b65c82"></div>
+
+  <p>
+    Before we were together, we were good friends.<br><br>
+    And then came the day our story changed —
+    the day we became a couple. 🥹💗
+  </p>
+</section>
+
+<section class="card">
+  <div class="eyebrow">A letter for my favourite person</div>
+
+  <h2 id="letterTitle">Dear Bhai Jaan 💌</h2>
+
+  <div class="letter" id="letterText"></div>
+
+  <button onclick="openSurprise()">
+    Open your little surprise 💝
+  </button>
+
+  <div id="surprise">
+    Hehe, my Bhai Jaan! 🥹💗
+
+    <br><br>
+
+    From calling each other by our special
+    nicknames to becoming a couple,
+    every little part of our story matters to me.
+
+    <br><br>
+
+    You call me Gadhedu,
+    and that silly little name is now
+    a sweet memory of us. ❤️
+
+    <br><br>
+
+    Happy 11 October to us. 🌸
+
+    <br><br>
+
+    With lots of love,<br>
+    Your Gadhedu ♡
+  </div>
+</section>
+
+<footer>
+  Made with love by Gadhedu 💗<br>
+  Friends first. Us forever in this memory. ♡
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  RELATIONSHIP_YEAR === "ADD YOUR YEAR"
+    ? "Our special year ♡"
+    : RELATIONSHIP_YEAR;
+
+document.getElementById("letterTitle").textContent =
+  "Dear " + HER_NICKNAME + ", 💌";
+
+document.getElementById("letterText").textContent =
+  "Do you remember how our story began? 💗\n\n" +
+  "Before we became a couple, we were good friends. " +
+  "We had our own little memories, conversations, " +
+  "and special nicknames.\n\n" +
+  "I used to call you Bhai Jaan, and then came " +
+  "11 October — the day our friendship turned " +
+  "into our first relationship. 🥹❤️\n\n" +
+  "After that, you started calling me Gadhedu. " +
+  "Hehe, who knew that one silly nickname " +
+  "would become such a special part of our story? 💕\n\n" +
+  "I made this little website to remember the day " +
+  "we became more than friends. I wanted to give " +
+  "our special date a place of its own.\n\n" +
+  "Thank you for the friendship, the smiles, " +
+  "the memories, and the happiness we share.\n\n" +
+  "I hope that whenever you open this page, " +
+  "you remember how our story began and smile. 🌷\n\n" +
+  "Happy 11 October to us. 💗\n\n" +
+  "With lots of love,\n" +
+  "Your Gadhedu ♡";
+
+function openSurprise() {
+  document.getElementById("surprise").style.display = "block";
+  document.getElementById("surprise").scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+  makeHearts(24);
+}
+
+function makeHearts(count) {
+  const symbols = ["💗", "💕", "💖", "♡", "🌸"];
+
+  for (let i = 0; i < count; i++) {
+    const item = document.createElement("span");
+    item.className = "floating";
+    item.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.fontSize = (16 + Math.random() * 18) + "px";
+    item.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(item);
+    item.addEventListener("animationend", () => item.remove());
+  }
+}
+
+// Gentle floating hearts
+setInterval(() => makeHearts(1), 1400);
+</script>
+
+</body>
+</html>
